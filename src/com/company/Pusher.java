@@ -1,7 +1,7 @@
 package com.company;
 
 public class Pusher extends Thread {
-    BlockArrayStack stack;
+    static BlockArrayStack stack;
     int i = 0;
     int whoAmI = 0;
 
@@ -27,7 +27,7 @@ public class Pusher extends Thread {
         } else if(whoAmI == 1) {
             while(true){
                 try{
-                    sleep(500);
+                    sleep(25);
                     System.out.println("popping"+ stack.pop());
                 }
                 catch (InterruptedException e){
